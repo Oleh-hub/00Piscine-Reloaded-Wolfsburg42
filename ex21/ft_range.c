@@ -26,7 +26,7 @@ int	*ft_range(int min, int max)
 
 	if (min > max)
 		return (NULL);
-	a = (int *) malloc(max - min);
+	a = (int *) malloc((max - min) * sizeof(max));
 	i = 0;
 	while (i < max - min)
 	{
@@ -36,25 +36,25 @@ int	*ft_range(int min, int max)
 	return (a);
 }
 
-// #include <stdio.h>
-// #include <string.h>
+#include <stdio.h>
+#include <string.h>
 
-// int main(void)
-// {
-// 	int *a;
-// 	int min = -15;
-// 	int max = 15;
+int main(void)
+{
+	int *a;
+	int min = -15;
+	int max = 15;
 
-// 	a = ft_range(min, max);
-// 	if (!a)
-// 	{
-// 		printf(" min > max !");
-// 		return 1;
-// 	}
-// 	for (int i = 0; i < max - min; i++)
-// 	{
-// 		printf("%i ", a[i]);
-// 	}
-// 	printf("\n");
-// 	free (a);
-// }
+	a = ft_range(min, max);
+	if (!a)
+	{
+		printf(" min > max !");
+		return 1;
+	}
+	for (int i = 0; i < max - min; i++)
+	{
+		printf("%i ", a[i]);
+	}
+	printf("\n");
+	free (a);
+}

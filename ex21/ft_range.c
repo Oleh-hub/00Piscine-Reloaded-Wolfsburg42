@@ -6,7 +6,7 @@
 /*   By: oruban <oruban@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:47:31 by oruban            #+#    #+#             */
-/*   Updated: 2023/11/09 14:32:32 by oruban           ###   ########.fr       */
+/*   Updated: 2023/11/10 19:51:51 by oruban           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	*ft_range(int min, int max)
 	int	i;
 	int	*a;
 
-	if (min > max)
+	if (min >= max)
 		return (NULL);
 	a = (int *) malloc((max - min) * sizeof(max));
 	i = 0;

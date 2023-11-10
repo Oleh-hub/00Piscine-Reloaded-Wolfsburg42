@@ -1,25 +1,23 @@
 // • Create a macro ABS which replaces its argument by it absolute value :
 // #define ABS(Value)
 
- #define ABS(Value)		\
-	if (Value < 0)		\
-		Value = -Value;	\
-	else				\
-		Value = Value;
+//  #define ABS(Value)	(Value *(Value > 0) + ((-Value) * (Value < 0)))
 
-
-// #include "ft_abs.h"
+#include "ft_abs.h"
 #include <stdio.h>
 
 int main(void)
 {
-	int i = -100;
-
-	ABS(i);
-	printf("%d ", i);
+	printf("%d ", ABS(-100));
 	printf("\n");
 
-	i = 100;
+	int i = -101;
+
+	ABS(i);
+	printf("%d ", ABS(i));
+	printf("\n");
+
+	i = 50;
 	
 	ABS(i);
 	printf("%d ", i);

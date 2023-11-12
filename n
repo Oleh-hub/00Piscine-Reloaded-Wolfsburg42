@@ -1,0 +1,11 @@
+
+mv Piscine_Reloaded P_R
+git clone git@vogsphere.42wolfsburg.de:vogsphere/intra-uuid-34fb65f7-033f-4657-b8d9-13f4e637c3d3-5303050-oruban Piscine_Reloaded
+cd P_R
+rm -rf .git/
+cp -r * ../Piscine_Reloaded/
+cd ..
+# rm -rf P_R/
+cd Piscine_Reloaded
+ls -tmpl
+pwd
